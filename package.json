@@ -1,0 +1,20 @@
+{
+  "name": "video",
+  "version": "1.0.0",
+  "main": "lekero.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "basic-ftp": "^5.0.5",
+    "express": "^5.1.0",
+    "ffprobe-static": "^3.1.0",
+    "puppeteer": "^24.10.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

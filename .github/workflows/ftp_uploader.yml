@@ -19,4 +19,4 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./
-          server-dir: /htdocs/video
+          server-dir: /htdocs/video/

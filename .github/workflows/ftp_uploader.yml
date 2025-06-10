@@ -1,0 +1,22 @@
+name: FTP feltöltő
+
+on:
+  push:
+    paths:
+      - 'current_video_link.txt'
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kód letöltése
+        uses: actions/checkout@v3
+
+      - name: FTP feltöltés
+        uses: sebastianpopp/ftp-action@v2
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          user: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          localDir: ./
+          remoteDir: /htdocs/video/

@@ -1,4 +1,4 @@
-name: FTP feltöltő
+name: FTP uploader
 
 on:
   push:
@@ -9,10 +9,10 @@ jobs:
   upload:
     runs-on: ubuntu-latest
     steps:
-      - name: Kód letöltése
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: FTP feltöltés
+      - name: Upload via FTP
         uses: sebastianpopp/ftp-action@v1.2.0
         with:
           host: ${{ secrets.FTP_HOST }}

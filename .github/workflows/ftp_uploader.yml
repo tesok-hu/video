@@ -1,4 +1,4 @@
-name: FTP uploader
+name: FTP feltöltő
 
 on:
   push:
@@ -9,14 +9,14 @@ jobs:
   upload:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Kód letöltése
         uses: actions/checkout@v3
 
-      - name: Upload via FTP
-        uses: sebastianpopp/ftp-action@v1.2.0
+      - name: FTP feltöltés
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          host: ${{ secrets.FTP_HOST }}
-          user: ${{ secrets.FTP_USER }}
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          localDir: ./
-          remoteDir: /htdocs/video/
+          local-dir: ./
+          server-dir: /htdocs/video

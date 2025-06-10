@@ -25,7 +25,7 @@ async function uploadToFTP(link) {
 
 // ✨ Link figyelés indítás
 (async () => {
-  const url = 'https://videzz.net/jzgpiuhzldfd.html';
+  const url = 'https://kozvetites.rf.gd/sweet/index2.php';
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
 
